@@ -89,6 +89,13 @@ title: Bienvenida al curso
 
 ---
 
+### Proyecto de repositorio de algoritmos éticos
+
+<img src="images/globlabAlgoEticos.png"/>
+
+
+---
+
 ## Objetivos del curso:
 
 Introducir a los estudiantes en el uso del lenguaje de programación Python para el manejo de datos relacionados al ámbito de las ciencias sociales y las políticas públicas. Al terminar este curso, el estudiante será capaz de resolver problemas por medio de algoritmos y lógica computacional, importar datos desde distintas fuentes, manipular y transformar información, hacer análisis descriptivos, visualizar campos de interés, y exportar resultados.
