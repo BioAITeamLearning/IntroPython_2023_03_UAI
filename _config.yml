@@ -3,7 +3,7 @@
 
 title: Introducción a Python 2023 - 03
 author: Reinel Tabares, Johan Piña, Brayan Arteaga
-logo: https://avatars.githubusercontent.com/u/142033488?s=200&v=4
+logo: images/logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
