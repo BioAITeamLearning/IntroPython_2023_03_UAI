@@ -91,8 +91,10 @@ title: Bienvenida al curso
 
 ### Proyecto de repositorio de algoritmos éticos
 
-<img src="images/globlabAlgoEticos.png"/>
 
+<a href="https://www.algoritmospublicos.cl/">
+    <img src="images/globlabAlgoEticos.png" alt="RepoAlgoritmosEticos">
+</a>
 
 ---
 
