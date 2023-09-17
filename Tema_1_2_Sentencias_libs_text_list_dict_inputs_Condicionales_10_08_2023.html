@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tema_1_2_Sentencias_libs_text_list_dict_inputs_Condicionales_10_08_2023';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -441,6 +443,26 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estructuras-condicionadas">Estructuras condicionadas</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mas-ejemplos-de-estructuras-condicionales">Más ejemplos de estructuras condicionales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazlo-tu-mismo">Hazlo tú mismo ✏️</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-1">Ejercicio 1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-2">Ejercicio 2:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-3">Ejercicio 3:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1921,6 +1943,587 @@ PorFuera2
 </div>
 </div>
 </section>
+<section id="mas-ejemplos-de-estructuras-condicionales">
+<h2>Más ejemplos de estructuras condicionales<a class="headerlink" href="#mas-ejemplos-de-estructuras-condicionales" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa que me diga si una persona es mayor de edad e imprima el mensaje <code class="docutils literal notranslate"><span class="pre">&quot;Mientras</span> <span class="pre">usted</span> <span class="pre">viva</span> <span class="pre">en</span> <span class="pre">esta</span> <span class="pre">casa</span> <span class="pre">se</span> <span class="pre">hará</span> <span class="pre">lo</span> <span class="pre">que</span> <span class="pre">yo</span> <span class="pre">diga&quot;</span></code>, en caso de que viva en la casa de sus padres y sea mayor de edad. Debe pedir la edad del usuario y preguntar si vive o no en la casa de sus padres.</p>
+<p><em>Implementación de <code class="docutils literal notranslate"><span class="pre">if</span></code> anidados. Los <code class="docutils literal notranslate"><span class="pre">if</span></code> anidados son estructuras que establecen condiciones consecutivas donde se encandenan, esto tiene diferentes aplicaciones desde hacer validaciones hasta generar filtros de condición.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable para leer la edad</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese la edad:&quot;</span><span class="p">)</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Variable para leer si o no</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vive en casa (si/no):&quot;</span><span class="p">)</span>
+<span class="n">casa</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="c1"># Acción con if anidados</span>
+<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es mayor de edad&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">casa</span> <span class="o">==</span> <span class="s2">&quot;si&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mientras usted viva en esta casa se hará lo que yo diga&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Puede hacer lo que le dé la gana en su casa&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usted es un bebé&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aprenda a escribir edades&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese la edad:
+12
+Vive en casa (si/no):
+no
+Usted es un bebé
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Ejercicio<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p><em><code class="docutils literal notranslate"><span class="pre">if</span></code> anidado incorporando <code class="docutils literal notranslate"><span class="pre">else</span></code></em></p>
+<p>Realizar un programa donde se le pida a un usuario que ingrese la temperatura actual de forma que si la temperatura es mayor a <span class="math notranslate nohighlight">\(15°\)</span> Celsius pase a la siguiente condición, donde se le pregunta si es mayor a <span class="math notranslate nohighlight">\(25°\)</span> Celsius, en caso de ser así, imprimir el mensaje <code class="docutils literal notranslate"><span class="pre">&quot;A</span> <span class="pre">la</span> <span class="pre">playa&quot;</span></code>, de lo contrario imprimir <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">la</span> <span class="pre">montaña!</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable para leer la temperatura</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese el valor de la temperatura:&quot;</span><span class="p">)</span>
+<span class="n">temperatura</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="n">temperatura</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">temperatura</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+        <span class="c1"># Si la temperatura es mayor que 25 ...</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡A la playa!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡A la montaña!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese el valor de la temperatura:
+60
+¡A la playa!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Ejercicio<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa que pida por teclado 2 números enteros diferentes y compare e imprima el mayor de ellos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Se pueden definir n variables del mismo tipo en la misma linea:</span>
+<span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+
+<span class="c1"># Variable para leer enteros</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese el primer numero: &quot;</span><span class="p">)</span>
+<span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese el segundo numero: &quot;</span><span class="p">)</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Comparar numeros</span>
+<span class="k">if</span> <span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El número mayor es:&quot;</span><span class="p">,</span> <span class="n">num1</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El número mayor es:&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese el primer numero: 
+3
+Ingrese el segundo numero: 
+45
+El número mayor es: 45
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>Ejercicio<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa que simule un inicio de sesión solicitando el nombre de usuario y contraseña. Mostrar un mensaje en pantalla si el inicio de sesión es correcto o incorrecto.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definiendo variables String en la misma línea:</span>
+<span class="n">nombre</span><span class="p">,</span> <span class="n">clave</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Variable para leer String</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese Nombre de usuario: &quot;</span><span class="p">)</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese Clave de usuario: &quot;</span><span class="p">)</span>
+<span class="n">clave</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="c1"># Validar entradas</span>
+<span class="k">if</span> <span class="n">nombre</span> <span class="o">==</span> <span class="s2">&quot;Juan&quot;</span> <span class="ow">and</span> <span class="n">clave</span> <span class="o">==</span> <span class="s2">&quot;123456&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bienvenido al Sistema&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre de Usuario o Contraseña Incorrecto&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese Nombre de usuario: 
+juan
+Ingrese Clave de usuario: 
+admin23
+Nombre de Usuario o Contraseña Incorrecto
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h2>Ejercicio<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<p>Una farmacia desea un programa para ingresar el valor de compra y calcular lo siguiente: si el pago se efectúa al <code class="docutils literal notranslate"><span class="pre">&quot;contado&quot;</span></code>, calcular un descuento del <span class="math notranslate nohighlight">\(5%\)</span>; pero si el pago es con <code class="docutils literal notranslate"><span class="pre">&quot;tarjeta&quot;</span></code> se incrementa un recargo del <span class="math notranslate nohighlight">\(3%\)</span> al valor de compra. Calcular y visualizar el descuento o recargo según sea el caso y el total a pagar de la compra.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definir variables double en una sola línea</span>
+<span class="n">valor</span><span class="p">,</span> <span class="n">descuento</span><span class="p">,</span> <span class="n">recargo</span><span class="p">,</span> <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span>
+
+<span class="c1"># Definir String</span>
+<span class="n">tipo_pago</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Variable para leer String</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese el valor de la compra: &quot;</span><span class="p">)</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese tipo de pago: &quot;</span><span class="p">)</span>
+<span class="n">tipo_pago</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># Descuento y recargo</span>
+<span class="n">descuento</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="o">*</span> <span class="n">valor</span>
+<span class="n">recargo</span> <span class="o">=</span> <span class="mf">0.03</span> <span class="o">*</span> <span class="n">valor</span>
+
+<span class="k">if</span> <span class="n">tipo_pago</span> <span class="o">==</span> <span class="s2">&quot;contado&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El descuento es:&quot;</span><span class="p">,</span> <span class="n">descuento</span><span class="p">)</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">valor</span> <span class="o">-</span> <span class="n">descuento</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El total es:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El recargo es:&quot;</span><span class="p">,</span> <span class="n">recargo</span><span class="p">)</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">valor</span> <span class="o">+</span> <span class="n">recargo</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El total es:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese el valor de la compra: 
+234
+Ingrese tipo de pago: 
+contado
+El descuento es: 11.700000000000001
+El total es: 222.3
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id6">
+<h2>Ejercicio<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<p><em><code class="docutils literal notranslate"><span class="pre">elif</span></code> es una alternativa al uso de los <code class="docutils literal notranslate"><span class="pre">if</span></code> anidados y la estructura <code class="docutils literal notranslate"><span class="pre">else</span></code>, este se activa como una condición alternativa si el resultado es falso en la condición inicial, esta funciona como un <code class="docutils literal notranslate"><span class="pre">else</span></code> pero iterativo y consecutivamente se cierra con <code class="docutils literal notranslate"><span class="pre">else</span></code>.</em></p>
+<p>Realizar un programa que le pregunte al usuario la cantidad de satelites que tiene Jupiter y valide e imprima un mensaje si ha acertado o no.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable para leer String</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¿Cuantos satélites tiene Júpiter?&quot;</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Validar e imprimir mensaje</span>
+<span class="k">if</span> <span class="n">C</span> <span class="o">==</span> <span class="mi">79</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Felicidades, has acertado la pregunta! :)&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">C</span> <span class="o">!=</span> <span class="mi">79</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lo siento, pero no es la respuesta correcta :(&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>¿Cuantos satélites tiene Júpiter?
+2
+Lo siento, pero no es la respuesta correcta :(
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h2>Ejercicio<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa que le pida al usuario un número del 1 al 7 y que imprima el día de la semana que corresponde a ese número.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Realizar un programa que le pida al usuario un número del 1 al 7 y que imprima el día de la semana que corresponde a ese número.</span>
+
+<span class="c1"># Variable para leer String</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese un número del 1 al 7: &quot;</span><span class="p">)</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Validar e imprimir mensaje</span>
+<span class="k">if</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El día es Lunes&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El día es Martes&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El día es Miércoles&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El día es Jueves&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El día es Viernes&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El día es Sábado&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El día es Domingo&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El número ingresado no es válido&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese un número del 1 al 7: 
+3
+El día es Miércoles
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id8">
+<h2>Ejercicio<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa que ordene 3 números de mayor a menor. Lea los numeros por teclado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definir variables (números enteros)</span>
+<span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+
+<span class="c1"># Leer variables</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese el primer número: &quot;</span><span class="p">)</span>
+<span class="n">n1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese el segundo número: &quot;</span><span class="p">)</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese el tercer número: &quot;</span><span class="p">)</span>
+<span class="n">n3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Lógica</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">n1</span> <span class="o">&gt;</span> <span class="n">n2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El orden es:&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n3</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">n1</span> <span class="o">&gt;</span> <span class="n">n3</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n3</span> <span class="o">&gt;</span> <span class="n">n2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El orden es:&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n1</span> <span class="o">&gt;</span> <span class="n">n3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El orden es:&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n3</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n3</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n3</span> <span class="o">&gt;</span> <span class="n">n1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El orden es:&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">n3</span> <span class="o">&gt;</span> <span class="n">n2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El orden es:&quot;</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El orden es:&quot;</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese el primer número: 
+2
+Ingrese el segundo número: 
+1
+Ingrese el tercer número: 
+12
+El orden es: 12 , 2 , 1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h2>Ejercicio<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<p>Realice un programa que pida al usuario una temperatura.</p>
+<ul class="simple">
+<li><p>Si la temperatura es mayor a <span class="math notranslate nohighlight">\(25\)</span>, imprima <code class="docutils literal notranslate"><span class="pre">&quot;A</span> <span class="pre">la</span> <span class="pre">playa!&quot;</span></code></p></li>
+<li><p>Si la temperatura es mayor a <span class="math notranslate nohighlight">\(15\)</span> y menor a <span class="math notranslate nohighlight">\(25\)</span>, imprima <code class="docutils literal notranslate"><span class="pre">&quot;A</span> <span class="pre">la</span> <span class="pre">montaña!&quot;</span></code></p></li>
+<li><p>Si la temperatura es menor a <span class="math notranslate nohighlight">\(5\)</span>, imprima <code class="docutils literal notranslate"><span class="pre">&quot;A</span> <span class="pre">esquiar!&quot;</span></code></p></li>
+</ul>
+<p>En caso contario, imprimir <code class="docutils literal notranslate"><span class="pre">&quot;A</span> <span class="pre">descansar...</span> <span class="pre">zZz&quot;</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable para leer temperatura</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese la temperatura:&quot;</span><span class="p">)</span>
+<span class="n">temperatura</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Lógica</span>
+<span class="k">if</span> <span class="n">temperatura</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="c1"># Si la temperatura es mayor que 25 ...</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A la playa!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temperatura</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="c1"># Si es mayor que 15 y no es mayor que 25 ...</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A la montaña!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">temperatura</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="c1"># Si es menor que 5 y está nevando y no es mayor que 15 ni mayor que 25 ...</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A esquiar!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Si la temperatura no cumple ninguna de las condiciones anteriores ...</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A descansar... zZz&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese la temperatura:
+22
+A la montaña!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id10">
+<h2>Ejercicio<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<p>Realice un programa que al introducir el Coeficiente Intelectual (IQ, por sus siglas en inglés) del usuario lo clasifique en Bajo, Medio, Normal o Alto.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable para leer IQ</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introduce el Coeficiente Intelectual: &quot;</span><span class="p">)</span>
+<span class="n">iq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Lógica</span>
+<span class="k">if</span> <span class="n">iq</span> <span class="o">&lt;=</span> <span class="mi">79</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IQ Bajo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">79</span> <span class="o">&lt;</span> <span class="n">iq</span> <span class="o">&lt;=</span> <span class="mi">89</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IQ Medio&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">90</span> <span class="o">&lt;=</span> <span class="n">iq</span> <span class="o">&lt;</span> <span class="mi">110</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IQ Normal&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">iq</span> <span class="o">&gt;=</span> <span class="mi">110</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IQ Alto&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Introduce el Coeficiente Intelectual: 
+49
+IQ Bajo
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h2>Ejercicio<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa que cuente los días que faltan para el fin de semana. Tenga en cuenta que:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Domingo = 1 (Fin de Semana)
+Lunes = 2
+Martes = 3
+Miercoles = 4
+Jueves = 5
+Viernes = 6
+Sabado = 7 (Fin de Semana)
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable para leer día de la semana</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese el día de la semana:&quot;</span><span class="p">)</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Variable para contar los días que faltan</span>
+<span class="n">diasHastaFinSemana</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Lógica</span>
+<span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">dia</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">dia</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">diasHastaFinSemana</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">dia</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">diasHastaFinSemana</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">dia</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="n">diasHastaFinSemana</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">dia</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="n">diasHastaFinSemana</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Días restantes hasta el fin de semana:&quot;</span><span class="p">,</span> <span class="n">diasHastaFinSemana</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">dia</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fin de semana&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La semana solo tiene 7 días&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese el día de la semana:
+4
+Días restantes hasta el fin de semana: 2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id12">
+<h2>Ejercicio<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa que pida al usuario un tipo de vehiculo (Carro, Camion, Moto) y que imprima a que hora del dia puede circular dependiendo del tipo ingresado. Si el usuario ingresa un tipo de vehiculo distinto debe mostrar un mensaje indicando el error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable para leer el tipo de vehículo</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En qué vehículo se desplaza (Carro/Camion/Moto):&quot;</span><span class="p">)</span>
+<span class="n">tipoVehiculo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="c1"># Lógica utilizando solo condicionales</span>
+<span class="k">if</span> <span class="n">tipoVehiculo</span> <span class="o">==</span> <span class="s2">&quot;Carro&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Puedes pasar de 00:00 a 08:00&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">tipoVehiculo</span> <span class="o">==</span> <span class="s2">&quot;Camion&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Puedes pasar de 08:00 a 16:00&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">tipoVehiculo</span> <span class="o">==</span> <span class="s2">&quot;Moto&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Puedes pasar de 16:00 a 24:00&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No se puede pasar con un &quot;</span> <span class="o">+</span> <span class="n">tipoVehiculo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>En qué vehículo se desplaza (Carro/Camion/Moto):
+Carro
+Puedes pasar de 00:00 a 08:00
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id13">
+<h2>Ejercicio<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa que simule el juego ‘Piedra, Papel o Tijera’. El usuario debe ingresar Piedra, Papel o Tijera, y competirá con la computadora.</p>
+<p>El usuario debe ingresar un numero entero (1 = Piedra, 2 = Papel, 3 = Tijera) e imprimir uno de los tres posibles resultados (ganar, perder o empatar).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----------- Piedra, Papel o Tijera -----------&quot;</span><span class="p">)</span>
+
+<span class="n">seleccionCompu</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Variable de tipo entero (1, 2 o 3) al azar</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La computadora ya escogió...&quot;</span><span class="p">)</span>
+
+<span class="c1"># Leer opción del usuario</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ingrese su opción [1=Piedra, 2=Papel, 3=Tijera]: &quot;</span><span class="p">)</span>
+<span class="n">seleccionUsuario</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="c1"># Lógica</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La computadora había escogido:&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">seleccionCompu</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Piedra&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Empate!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usted gana!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La computadora gana!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Su opción no es válida, vuelva a intentarlo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">seleccionCompu</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Papel&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La computadora gana!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Empate!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usted gana!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Su opción no es válida, vuelva a intentarlo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">seleccionCompu</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tijera&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usted gana!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La computadora gana!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">seleccionUsuario</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Empate!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Su opción no es válida, vuelva a intentarlo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------- Piedra, Papel o Tijera -----------
+La computadora ya escogió...
+Ingrese su opción [1=Piedra, 2=Papel, 3=Tijera]: 
+2
+La computadora había escogido:
+Tijera
+La computadora gana!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id14">
+<h2>Ejercicio<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<p>Hacer un programa que simule un cajero automático con un saldo inicial de <span class="math notranslate nohighlight">\(1000\)</span> dólares, con el siguiente menú de opciones:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Ingresar dinero a la cuenta.
+2. Retirar dinero de la cuenta.
+3. Salir.
+</pre></div>
+</div>
+<p>Para cada opción debe imprimir un mensaje. Si el saldo a retirar es mayor al que tiene en la cuenta tambien debe indicarlo en pantalla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definir variables</span>
+<span class="n">saldo_inicial</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">opcion</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">ingreso</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">saldoActual</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">retiro</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="c1"># Mostrar menú</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Ingresar dinero a la cuenta&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Retirar dinero de la cuenta.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Salir.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Variable de tipo input para leer otras variables</span>
+<span class="n">opcion</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresar la opción: &quot;</span><span class="p">))</span>
+
+<span class="c1"># Lógica</span>
+<span class="k">if</span> <span class="n">opcion</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">ingreso</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese la cantidad que desea ingresar en la cuenta: &quot;</span><span class="p">))</span>
+    <span class="n">saldoActual</span> <span class="o">=</span> <span class="n">saldo_inicial</span> <span class="o">+</span> <span class="n">ingreso</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El saldo actual es:&quot;</span><span class="p">,</span> <span class="n">saldoActual</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">opcion</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">retiro</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese la cantidad que desea retirar: &quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">retiro</span> <span class="o">&lt;=</span> <span class="n">saldo_inicial</span><span class="p">:</span>
+        <span class="n">saldoActual</span> <span class="o">=</span> <span class="n">saldo_inicial</span> <span class="o">-</span> <span class="n">retiro</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dinero en la cuenta:&quot;</span><span class="p">,</span> <span class="n">saldoActual</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No cuenta con el saldo suficiente&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">opcion</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasta luego...&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Opción no válida, intente de nuevo.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1. Ingresar dinero a la cuenta
+2. Retirar dinero de la cuenta.
+3. Salir.
+Ingresar la opción: 1
+Ingrese la cantidad que desea ingresar en la cuenta: 457
+El saldo actual es: 1457.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hazlo-tu-mismo">
+<h2>Hazlo tú mismo ✏️<a class="headerlink" href="#hazlo-tu-mismo" title="Permalink to this heading">#</a></h2>
+<section id="ejercicio-1">
+<h3>Ejercicio 1:<a class="headerlink" href="#ejercicio-1" title="Permalink to this heading">#</a></h3>
+<p>Realizar un programa que determine si un estudiante ha aprobado o no un examen. Para aprobar el examen, el estudiante debe obtener una calificación de al menos <span class="math notranslate nohighlight">\(60\)</span> en el examen escrito y una calificación de al menos <span class="math notranslate nohighlight">\(80\)</span> en el examen oral. Además, si la calificación total del examen (promedio de las calificaciones) es superior o igual a <span class="math notranslate nohighlight">\(90\)</span>, el estudiante recibe una mención honorífica.</p>
+<ul class="simple">
+<li><p><strong>Nota:</strong> Debe ingresar como minimo 4 estudiantes con su respectivas notas.</p></li>
+</ul>
+</section>
+<section id="ejercicio-2">
+<h3>Ejercicio 2:<a class="headerlink" href="#ejercicio-2" title="Permalink to this heading">#</a></h3>
+<p>Tienes una tienda de ropa y deseas calcular el precio final de una compra de un cliente. La tienda ofrece un descuento del <span class="math notranslate nohighlight">\(10\%\)</span> en todas las compras que superen los <span class="math notranslate nohighlight">\(\$100\)</span>, y un descuento adicional del <span class="math notranslate nohighlight">\(5\%\)</span> si el cliente tiene una tarjeta de membresía de la tienda. Además, la tienda cobra una tarifa de envío de <span class="math notranslate nohighlight">\(\$5\)</span> para todas las compras que se envían por correo. Si el cliente gasta más de <span class="math notranslate nohighlight">\(\$200\)</span>, la tienda cubre el costo de envío.</p>
+</section>
+<section id="ejercicio-3">
+<h3>Ejercicio 3:<a class="headerlink" href="#ejercicio-3" title="Permalink to this heading">#</a></h3>
+<p>Debes crear un programa de gestión de personal que almacena la información de los empleados en una base de datos. Cada empleado tiene un nombre, una edad, un salario y un cargo. La empresa tiene tres cargos diferentes: <code class="docutils literal notranslate"><span class="pre">&quot;gerente&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;supervisor&quot;</span></code> y <code class="docutils literal notranslate"><span class="pre">&quot;empleado&quot;</span></code>. El programa debe imprimir una carta para cada empleado, que depende de su cargo y su salario. Si el salario es mayor que <span class="math notranslate nohighlight">\(\$50000\)</span>, la carta debe ser de felicitación. Si el salario es menor o igual a <span class="math notranslate nohighlight">\(\$50000\)</span>, la carta debe ser de agradecimiento. La carta también debe mencionar el cargo del empleado.</p>
+<ul class="simple">
+<li><p><strong>Nota:</strong> Debe ingresar como minimo 5 empleados con sus respectivos datos.</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2009,6 +2612,26 @@ PorFuera2
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estructuras-condicionadas">Estructuras condicionadas</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mas-ejemplos-de-estructuras-condicionales">Más ejemplos de estructuras condicionales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazlo-tu-mismo">Hazlo tú mismo ✏️</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-1">Ejercicio 1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-2">Ejercicio 2:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-3">Ejercicio 3:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

@@ -422,8 +422,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Estructuras repetitivas y Funciones</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Estructuras repetitivas y Funciones</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion-a-interacion-y-bucle">Introducción a interación y bucle</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estructuras-repetitivas">Estructuras repetitivas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1">Ejemplo 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2">Ejemplo 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-3">Ejemplo 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-4">Ejemplo 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-5">Ejemplo 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-6">Ejemplo 6</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio">Ejercicio</a></li>
 </ul>
 </li>
@@ -443,6 +452,54 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="estructuras-repetitivas-y-funciones">
 <h1>Estructuras repetitivas y Funciones<a class="headerlink" href="#estructuras-repetitivas-y-funciones" title="Permalink to this heading">#</a></h1>
+<p>Los programas utilizados hasta este momento han examinado conceptos de programación, tales como entradas, salidas, asignaciones, expresiones y operaciones, sentencias secuenciales y de selección. Sin embargo, muchos problemas requieren de características de repetición, en las que algunos cálculos o secuencia de instrucciones se repiten una y otra vez, utilizando diferentes conjuntos de datos.</p>
+<section id="introduccion-a-interacion-y-bucle">
+<h2>Introducción a interación y bucle<a class="headerlink" href="#introduccion-a-interacion-y-bucle" title="Permalink to this heading">#</a></h2>
+<p>Supongamos que se desea sumar una lista de números escritos desde teclado, por ejemplo, calificaciones de los alumnos de una clase.</p>
+<p>El medio conocido hasta ahora es leer los números y añadir sus valores a una variable SUMA que contenga las sucesivas sumas parciales. El valor de SUMA se incrementa cada vez que se lea un nuevo número.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definir variables</span>
+<span class="n">SUMA</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Leer e ingresar números</span>
+<span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese un número: &quot;</span><span class="p">))</span>
+<span class="n">SUMA</span> <span class="o">=</span> <span class="n">SUMA</span> <span class="o">+</span> <span class="n">numero</span>
+
+<span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese otro número: &quot;</span><span class="p">))</span>
+<span class="n">SUMA</span> <span class="o">=</span> <span class="n">SUMA</span> <span class="o">+</span> <span class="n">numero</span>
+
+<span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese un tercer número: &quot;</span><span class="p">))</span>
+<span class="n">SUMA</span> <span class="o">=</span> <span class="n">SUMA</span> <span class="o">+</span> <span class="n">numero</span>
+
+<span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese un cuarto número: &quot;</span><span class="p">))</span>
+<span class="n">SUMA</span> <span class="o">=</span> <span class="n">SUMA</span> <span class="o">+</span> <span class="n">numero</span>
+
+<span class="c1"># Mostrar la suma de los números ingresados</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de los números ingresados es:&quot;</span><span class="p">,</span> <span class="n">SUMA</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese un número: 6
+Ingrese otro número: 3
+Ingrese un tercer número: 2
+Ingrese un cuarto número: 5
+La suma de los números ingresados es: 16
+</pre></div>
+</div>
+</div>
+</div>
+<p>El algoritmo incrementa el valor de SUMA cada vez que se lee una variable numero.</p>
+<p>En este algoritmo se repiten muchas veces las acciones:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese un cuarto número: &quot;</span><span class="p">))</span>
+<span class="n">SUMA</span> <span class="o">=</span> <span class="n">SUMA</span> <span class="o">+</span> <span class="n">numero</span>
+
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Las estructuras que repiten una secuencia de instrucciones un número determinado de veces se denominan bucles y se denomina iteración al hecho de repetir la ejecución de una secuencia de acciones.</p>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="estructuras-repetitivas">
 <h1>Estructuras repetitivas<a class="headerlink" href="#estructuras-repetitivas" title="Permalink to this heading">#</a></h1>
@@ -688,6 +745,239 @@ d
 </div>
 </div>
 </div>
+<p><a name="1"></a></p>
+<section id="ejemplo-1">
+<h2>Ejemplo 1<a class="headerlink" href="#ejemplo-1" title="Permalink to this heading">#</a></h2>
+<p>Realiza un algoritmo que cuente las vocales de un <code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Anita lava la tina&quot;</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">frase</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">letra</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;i&quot;</span><span class="p">,</span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="s2">&quot;u&quot;</span><span class="p">):</span>
+        <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hay </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> vocales&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hay 8 vocales
+</pre></div>
+</div>
+</div>
+</div>
+<p><a name="2"></a></p>
+</section>
+<section id="ejemplo-2">
+<h2>Ejemplo 2<a class="headerlink" href="#ejemplo-2" title="Permalink to this heading">#</a></h2>
+<p>Realiza un programa que haga un triangulo de caracteres</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pista. En Python es posible multiplicar strings:</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hola &quot;</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aaa
+hola hola hola hola hola 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="o">*</span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+</pre></div>
+</div>
+</div>
+</div>
+<p><a name="3"></a></p>
+</section>
+<section id="ejemplo-3">
+<h2>Ejemplo 3<a class="headerlink" href="#ejemplo-3" title="Permalink to this heading">#</a></h2>
+<p>Realiza un programa que genere una tabla de multiplicación</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">n</span><span class="o">*</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+2 x 6 = 12
+2 x 7 = 14
+2 x 8 = 16
+2 x 9 = 18
+2 x 10 = 20
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tambien lo podemos hacer personalizable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa el número del que quieres su tabla: &quot;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+  <span class="n">result</span><span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa el número del que quieres su tabla: 5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+</pre></div>
+</div>
+</div>
+</div>
+<p><a name="4"></a></p>
+</section>
+<section id="ejemplo-4">
+<h2>Ejemplo 4<a class="headerlink" href="#ejemplo-4" title="Permalink to this heading">#</a></h2>
+<p>Realizar un programa para calcular el factorial de un número n</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese un número entero: &quot;</span><span class="p">))</span>
+<span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">factorial</span> <span class="o">=</span> <span class="n">factorial</span> <span class="o">*</span> <span class="n">i</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El factorial de n con parámetros 1, n+1, 1 es: &quot;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese un número entero: 6
+El factorial de n con parámetros 1, n+1, 1 es:  720
+</pre></div>
+</div>
+</div>
+</div>
+<p><a name="5"></a></p>
+</section>
+<section id="ejemplo-5">
+<h2>Ejemplo 5<a class="headerlink" href="#ejemplo-5" title="Permalink to this heading">#</a></h2>
+<p>Realiza un programa para generar secuencias con ciclo anidados</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese un número entero: &quot;</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese un número entero: 6
+1
+22
+333
+4444
+55555
+666666
+
+1
+12
+123
+1234
+12345
+123456
+</pre></div>
+</div>
+</div>
+</div>
+<p><a name="6"></a></p>
+</section>
+<section id="ejemplo-6">
+<h2>Ejemplo 6<a class="headerlink" href="#ejemplo-6" title="Permalink to this heading">#</a></h2>
+<p>Realiza un programa para generar secuencias con ciclo anidados de forma inversa</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese un número entero: &quot;</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingrese un número entero: 8
+88888888
+7777777
+666666
+55555
+4444
+333
+22
+1
+
+87654321
+7654321
+654321
+54321
+4321
+321
+21
+1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="ejercicio">
 <h2>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -1085,8 +1375,17 @@ d
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Estructuras repetitivas y Funciones</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Estructuras repetitivas y Funciones</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion-a-interacion-y-bucle">Introducción a interación y bucle</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estructuras-repetitivas">Estructuras repetitivas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1">Ejemplo 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2">Ejemplo 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-3">Ejemplo 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-4">Ejemplo 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-5">Ejemplo 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-6">Ejemplo 6</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio">Ejercicio</a></li>
 </ul>
 </li>
